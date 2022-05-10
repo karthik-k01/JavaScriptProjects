@@ -1,0 +1,14 @@
+.registration-form{
+    color: black;
+    width: 80%;
+    border: 2px solid;
+    margin: 10% auto;
+    padding: 5%;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+.display-3{
+    margin: 5% 10% auto;
+    font-weight: 400;
+}
