@@ -1,0 +1,37 @@
+body{
+    
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+h1{
+    font-size: 3em;
+}
+
+h3{
+    font-size: 1.5em;
+    background-color: #eee;
+    padding: 10px;
+    width: 140px;
+    margin: auto 277px;
+}
+
+.row{
+    display: flex;
+    height: 600px;
+    width: 606px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.col{
+    font-family: 'Grape Nuts', cursive;
+    height: 200px;
+    width: 200px;
+    background-color: skyblue;
+    border: 1px solid black;
+    flex: auto;
+    font-size: 7em;
+    text-align: center;
+}
