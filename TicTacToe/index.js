@@ -2,6 +2,7 @@ let grids = document.getElementsByClassName("col")
 let currentTurnText = document.getElementById("currentTurnText")
 let currentTurn = 1
 let gameOver = false
+let count = 0
 
 const playerTicker = {
     1: 'X',
@@ -29,14 +30,17 @@ const singleMove = (index) => {
             currentTurnText.style.backgroundColor = '#90EE90'
             return
         }
-        currentTurn = currentTurn === 1 ? 2 : 1
-        currentTurnText.innerText = `Player ${currentTurn}'s turn`
         
-        if (winningPlayer == 'No Winner' && combination.every(index => grids[index].innerText)) {
+        currentTurn = currentTurn === 1 ? 2 : 1
+        count++
+        currentTurnText.innerText = `Player ${currentTurn}'s turn`
+       
+        if (winningPlayer == 'No Winner' && count == 9) {
             currentTurnText.innerText = "Match Drawn"
             currentTurnText.style.backgroundColor = "#808080"
             return
         }
+        
     }
 
 }
