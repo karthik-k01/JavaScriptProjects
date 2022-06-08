@@ -10,9 +10,10 @@
 <body>
 
 <div>
-    <input type="password" placeholder="Create your password" id="sign-up-password">
-    
+    <input type="password" placeholder="Create your password" id="sign-up-password" onkeyup="checkPasswordStrength()">
+    <p class="invalid" id="password-strength"></p>
     <p class="valid" id="sign-up-valid">Password saved successfully</p>
+    
     <button onclick="signUp()">Sign up</button>
 </div>    
     <hr>
