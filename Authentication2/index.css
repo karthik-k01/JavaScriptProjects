@@ -1,0 +1,23 @@
+.navbar-brand, .nav-link:hover{
+    cursor: pointer;
+}
+
+#home-page {
+    display: block;
+
+}
+
+
+#sign-up{
+    display: none;
+}
+
+#login{
+    display: none;
+}
+
+p{
+    font-size: 0.8em;
+    margin-top: 0;
+    display: none;
+}

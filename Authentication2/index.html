@@ -8,6 +8,7 @@
     <title>Authentication 2</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -16,7 +17,8 @@
 
         <!-------------NAVBAR-------------------------------------------------------------------------------------------------->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">User Management</a>
+            <a class="navbar-brand" onclick="changeActiveNavLink('HOME')" id="home-nav-link"
+                style="cursor: pointer;">User Management</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,205 +26,253 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link active" onclick="changeActiveNavLink('HOME')" id="home-nav-link">Home</a>
                     </li>
 
 
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#sign-up">Sign Up </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#login">Login </a>
-                    </li>
-                </ul>
-            </form>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="changeActiveNavLink('SIGN_UP')" id="signup-nav-link">Sign Up
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="changeActiveNavLink('LOGIN')" id="login-nav-link">Login </a>
+                        </li>
+                    </ul>
+                </form>
             </div>
         </nav>
 
         <!----------------------------------------------------------------------------------------------------------------------------->
 
-        <!---------------------------JUMBOTRON---------------------------------------------------------------------------------- -->>
-        <div class="jumbotron">
-            <h1 class="display-4">Welcome to User Management App</h1>
+        <!---------------------------JUMBOTRON---------------------------------------------------------------------------------- -->
+        <div class="jumbotron" id="home-page">
+            <h1 class="display-4">Welcome to "Our Page"</h1>
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
                 to featured content or information.</p>
             <hr class="my-4">
             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-dark btn-lg" href="#" role="button">Learn more</a>
+            <a class="btn btn-dark btn-lg" href="#" role="button" onclick="changeActiveNavLink('SIGN_UP')">Learn
+                more</a>
         </div>
 
         <!----------------------------------------------------------------------------------------------------------------------------->
 
         <!----------SIGNUP FORM------------------------------------------------------------------------------------------------------>
-        <h1 class="display-4" style="margin-top: 50px;" id="sign-up">Sign Up</h1>
-        <form class="needs-validation" novalidate>
-            
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label for="validationCustom01">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="validationCustom02">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label for="validationCustom03">City</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                  Please provide a valid city.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationCustom04">State</label>
-                <select class="custom-select" id="validationCustom04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>...</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid state.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationCustom05">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" required>
-                <div class="invalid-feedback">
-                  Please provide a valid zip.
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-dark" type="submit">Submit form</button>
-          </form>
-          
-          <script>
-          // Example starter JavaScript for disabling form submissions if there are invalid fields
-          (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-              // Fetch all the forms we want to apply custom Bootstrap validation styles to
-              var forms = document.getElementsByClassName('needs-validation');
-              // Loop over them and prevent submission
-              var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                  if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                  }
-                  form.classList.add('was-validated');
-                }, false);
-              });
-            }, false);
-          })();
-          </script>
+        <div id="signup-page">
+            <h1 class="display-4" style="margin-top: 50px;">Sign Up</h1>
+            <form class="needs-validation" novalidate>
 
-    <!----------------------------------------------------------------------------------------------------------------------------->
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="signup-firstName ">First name</label>
+                        <input type="text" class="form-control" id="signup-firstName" required>
+                        <div class="valid-feedback" id="signup-firstName-Valid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="signup-firstName-invalid">
+                            Please provide a valid first name.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="signup-lastName">Last name</label>
+                        <input type="text" class="form-control" id="signup-lastName" required>
+                        <div class="valid-feedback" id="signup-lastName-Valid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="signup-lastName-invalid">
+                            Please provide a valid last name.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="signUp-Email">Email ID</label>
+                        <input type="email" class="form-control" id="signUp-Email" required>
+                        <div class="valid-feedback" id="signup-email-Valid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="signup-email-Invalid">
+                            Please provide a valid email.
+                        </div>
+                    </div>
 
-    <!----------LOGIN FORM------------------------------------------------------------------------------------------------------>
-    <h1 class="display-4" style="margin-top: 50px;" id="login">Login</h1>
-    <form class="needs-validation" novalidate>
-        
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="validationCustom01">First name</label>
-            <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="validationCustom02">Last name</label>
-            <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="validationCustom03">City</label>
-            <input type="text" class="form-control" id="validationCustom03" required>
-            <div class="invalid-feedback">
-              Please provide a valid city.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationCustom04">State</label>
-            <select class="custom-select" id="validationCustom04" required>
-              <option selected disabled value="">Choose...</option>
-              <option>...</option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid state.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationCustom05">Zip</label>
-            <input type="text" class="form-control" id="validationCustom05" required>
-            <div class="invalid-feedback">
-              Please provide a valid zip.
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
-              Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
-            </div>
-          </div>
-        </div>
-        <button class="btn btn-dark" type="submit">Submit form</button>
-      </form>
-      
-      <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-      </script>
+                    <div class="col-md-6 mb-3">
+                        <label for="signUp-Password">Password</label>
+                        <input type="password" class="form-control" id="signUp-Password"
+                            onkeyup="checkPasswordStrength()" required>
+                        <p class="invalid" id="password-strength"></p>
+                        <p class="valid" id="signup-password-valid">Password saved successfully</p>
 
-<!----------------------------------------------------------------------------------------------------------------------------->
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="signup-city">City</label>
+                        <input type="text" class="form-control" id="signup-city" required>
+                        <div class="invalid-feedback" id="signup-city-invalid">
+                            Please provide a valid city.
+                        </div>
+                        <div class="valid-feedback" id="signup-city-valid">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3" ">
+                        <label for=" state" class="form-label">State</label>
+                        <select class="form-select" id="state" style="height: 54%;" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Puducherry">Puducherry</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
+                        <div class="valid-feedback" id="stateValid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="stateInvalid">
+                            Please select a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="zipCode" class="form-label">Zip</label>
+                        <input type="text" class="form-control" id="zipCode" required>
+                        <div class="valid-feedback" id="zipCodeValid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="zipCodeInvalid">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="tncCheck" required>
+                        <label class="form-check-label" for="tncCheck">
+                            Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback" id="tncInvalid">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-dark" type="submit" onclick="signUp()">Sign Up</button>
+            </form>
+
+            <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                    'use strict';
+                    window.addEventListener('load', function () {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                    }, false);
+                })();
+            </script>
+        </div>
+
+        <!----------------------------------------------------------------------------------------------------------------------------->
+
+        <!----------LOGIN FORM------------------------------------------------------------------------------------------------------>
+        <div id="login-page">
+            <h1 class="display-4" style="margin-top: 50px;">Login</h1>
+            <form class="needs-validation" novalidate>
+
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="loginEmail">Email ID</label>
+                        <input type="email" class="form-control" id="loginEmail" value="Mark" required>
+                        <div class="valid-feedback" id="loginEmail-valid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="loginEmail-invalid">
+                            Please enter correct email ID.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                        <div class="invalid-feedback" id="loginPassword-invalid">
+                            Please provide correct password.
+                        </div>
+                        <div class="valid-feedback" id="loginPassword-valid">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-dark" type="submit" onclick="logIn()">Login</button>
+            </form>
+
+            <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                    'use strict';
+                    window.addEventListener('load', function () {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                    }, false);
+                })();
+            </script>
+        </div>
+        <!----------------------------------------------------------------------------------------------------------------------------->
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
