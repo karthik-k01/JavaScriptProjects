@@ -47,7 +47,7 @@ div.status-block{
 
 h1{
     background: rgb(3,0,255);
-background: linear-gradient(0deg, rgba(3,0,255,1) 24%, rgba(255,255,255,1) 100%);
+background: linear-gradient(0deg, rgba(3,0,255,1) 21%, rgba(0,0,0,1) 65%);
 color: whitesmoke;
 margin: 0;
 padding: 20px;
