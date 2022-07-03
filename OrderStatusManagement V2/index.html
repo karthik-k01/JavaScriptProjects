@@ -7,12 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Status Management V2</title>
   <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -43,30 +41,30 @@
   </nav>
 
   <!-- ------------------------------------------------------------------------------------------------------------- -->
-
-  <!-- ---------------------------HEADING SECTION--------------------------------------------------------------------- -->
-
+<div class="container">
+     <!-- ---------------------------HEADING SECTION--------------------------------------------------------------------- -->
+  
   <h1 class="display-4 main-heading">Order Status Management</h1>
 
   <input class="form-control form-control-lg order-id-input" type="text" placeholder="Enter Order ID to execute"
     id="order-id-input">
 
-    <div class="outer-btn">
-      <button class="btn btn-dark btn-lg execute-btn" onclick="executeOrder()">Execute</button>
-    </div>
-    
+  <div class="outer-btn">
+    <button class="btn btn-dark btn-lg execute-btn" onclick="executeOrder()">Execute</button>
+  </div>
+
   <!-- ------------------------------------------------------------------------------------------------------------- -->
 
   <!-- -------------------------MAIN SECTION------------------------------------------------------------------- -->
 
-  <div class="row">
-    <div class="col-md-4 col-xs-12 order-block" >
+  <div class="row" id="parent-div">
+    <div class="col-md-4 col-xs-12 order-block">
       <div class="card text-center">
         <div class="card-header" id="order-id-display-1">
-    
+          Order ID : ABCD0001
         </div>
         <div class="card-body">
-          <h5 class="card-title">Bill Amount: 500</h5>
+          <h5 class="card-title">Bill Amount: </h5>
           <p class="card-text">Items: ABC, XYZ, JKL</p>
           <a href="#" class="btn btn-danger">Cancel Order</a>
         </div>
@@ -76,87 +74,20 @@
       </div>
     </div>
 
-    <div class="col-md-4 col-xs-12 order-block" >
-      <div class="card text-center">
-        <div class="card-header">
-          
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Bill Amount: 500</h5>
-          <p class="card-text">Items: ABC, XYZ, JKL</p>
-          <a href="#" class="btn btn-danger">Cancel Order</a>
-        </div>
-        <div class="card-footer">
-          Pizza Baked!
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md-4 col-xs-12 order-block" >
-      <div class="card text-center">
-        <div class="card-header">
-          
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Bill Amount: 500</h5>
-          <p class="card-text">Items: ABC, XYZ, JKL</p>
-          <a href="#" class="btn btn-danger">Cancel Order</a>
-        </div>
-        <div class="card-footer">
-          Pizza Baked!
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md-4 col-xs-12 order-block" >
-      <div class="card text-center">
-        <div class="card-header">
-          
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Bill Amount: 500</h5>
-          <p class="card-text">Items: ABC, XYZ, JKL</p>
-          <a href="#" class="btn btn-danger">Cancel Order</a>
-        </div>
-        <div class="card-footer">
-          Pizza Baked!
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-xs-12 order-block" >
-      <div class="card text-center">
-        <div class="card-header">
-          
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Bill Amount: 500</h5>
-          <p class="card-text">Items: ABC, XYZ, JKL</p>
-          <a href="#" class="btn btn-danger">Cancel Order</a>
-        </div>
-        <div class="card-footer">
-          Pizza Baked!
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-xs-12 order-block" >
-      <div class="card text-center">
-        <div class="card-header">
-          
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Bill Amount: 500</h5>
-          <p class="card-text">Items: ABC, XYZ, JKL</p>
-          <a href="#" class="btn btn-danger">Cancel Order</a>
-        </div>
-        <div class="card-footer">
-          Pizza Baked!
-        </div>
-      </div>
-    </div>
   </div>
-  </div>
+
+
+</div>
+   
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="JSFiles/index.js"></script>
+  <script src="JSFiles/OrderStatus.js"></script>
 </body>
 
 </html>

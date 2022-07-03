@@ -18,5 +18,13 @@
 }
 
 .order-block{
-    display: none;
+    margin: 20px 0;
+}
+
+.card{
+    border-radius: 20px;
+}
+.card-footer{
+    background: none;
+    border: none;
 }
