@@ -1,10 +1,12 @@
-let orderNo = 0
 
-let orderBlocks = document.getElementsByClassName("order-block")
 
-let cardHeaders = document.getElementsByClassName("card-header")
+
+
+
 
 let parentDiv = document.getElementById("parent-div")
+
+let emptyOrderStatus = document.getElementById("empty-order-status-gif")
 /* Basic method to add on upto 6 elements 
 
 const executeOrder = () => {
@@ -77,8 +79,37 @@ const createNewOrderColumn = (orderIDInput) => {
     cardButtonA.classList = 'btn btn-danger cancel-button'
     cardFooterDiv.classList = 'card-footer'
     cardBodySpan.classList = 'badge rounded-pill bg-success order-status'
+    cardBodySpan.id = orderIDInput
+
+
+    cardButtonA.addEventListener('click', () => {
+        colDiv.style.display = 'none'
+    })
 }
+
+
+
 const executeOrder = () => {
+    emptyOrderStatus.style.display = "none"
     let orderIDInput = document.getElementById("order-id-input").value
+
+    if(!orderIDInput.length){
+		alert('Please enter a valid order ID')
+		return
+    }
+    
     createNewOrderColumn(orderIDInput)
+
+    document.getElementById(orderIDInput).innerText = 'Order Placed!'
+
+    chefReceived(orderIDInput)
+		.then(pizzaSauceAdded)
+		.then(firstLayerOfCheezeAdded)
+		.then(toppingsAdded)
+		.then(secondLayerOfCheezeAdded)
+		.then(pizzaBaked)
+		.then(oreganoAdded)
+		.then(packageReceivedAtCounter)
+		.then(() => document.getElementById(orderIDInput).innerText = 'Order Ready!')
+		.catch((err) => console.log(err))
 }

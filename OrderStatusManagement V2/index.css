@@ -48,3 +48,8 @@
 .order-status{
     font-size: 1.15em;
 }
+
+.empty-order-gif{
+    max-width: 200px;
+    margin: auto;
+}
