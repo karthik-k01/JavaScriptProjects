@@ -1,0 +1,50 @@
+body{
+    background: rgb(0,5,251);
+    background: linear-gradient(90deg, rgba(0,5,251,1) 36%, rgba(43,210,205,1) 81%);
+}
+
+.frame{
+    text-align: center;
+    border: 1px solid black;
+    padding: 25px;
+
+}
+
+h1{
+    font-size: 3em;
+}
+
+p, label{
+    font-size: 1.5em;
+}
+
+.inputBar{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+    display: block;
+}
+
+button{
+    font-size: large;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+}
+
+.hint-class{
+    border: 1px solid black;
+    padding: 10px 30px 10px 30px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.success{
+    background-color: #00FF00;
+}
+
+.danger{
+    background-color: red;
+}
