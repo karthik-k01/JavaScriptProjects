@@ -7,7 +7,8 @@ body{
     text-align: center;
     border: 1px solid black;
     padding: 25px;
-
+    border-radius: 25px;
+    background-color: #318CE7;
 }
 
 h1{
@@ -34,7 +35,11 @@ button{
     padding: 10px 20px 10px 20px;
 }
 
-.hint-class{
+button:hover{
+    cursor: pointer;
+}
+
+#hint{
     border: 1px solid black;
     padding: 10px 30px 10px 30px;
     border-radius: 25px;
@@ -43,8 +48,16 @@ button{
 
 .success{
     background-color: #00FF00;
+    border-color: #00FF00;
 }
 
 .danger{
     background-color: red;
+    border-color: red;
+}
+
+.gameOver{
+    background-color: #696969;
+    border-color: #696969;
+
 }
