@@ -1,3 +1,4 @@
+
 .container{
     padding: 0;
     margin: 20px auto;
@@ -15,6 +16,7 @@
     border: 2px solid black;
     height: 100%;
     margin: 10px;
+
 }
 
 .display-4{
@@ -28,3 +30,27 @@
     text-align: center;
 }
 
+.card{
+    margin: 10px;
+    margin-top: 20px;
+    background-color: #E6E6FA;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+
+}
+
+.card .card-header{
+    display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+
+
+
+.cancel-btn{
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+}
