@@ -15,11 +15,12 @@
 <body>
     <div class="container">
         <div class="main-outer-btn">
-            <button type="button" class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#createToDoModal">Create a To-Do Item</button>
+            <button type="button" class="btn btn-dark btn-lg" data-bs-toggle="modal"
+                data-bs-target="#createToDoModal">Create a To-Do Item</button>
         </div>
         <div class="row outer">
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section" id="to-do-block">
+                <div class="todo-section" id="to-do-block" ondropover="allowDrop(event)" ondrop="dropToDo(event)">
                     <h1 class="display-4">To-Do</h1>
                     <!-- <div class="card">
                         <div class="card-header">
@@ -31,15 +32,22 @@
                           <a href="#" class="btn btn-danger cancel-btn" onclick="deleteCard()">Delete Event</a>
                         </div>
                       </div> -->
+                    <div class="card" id="test-id" draggable="true" ondragstart="ToDoDragStart()" ondrag="toDoDrag()">
+                        <div class="card-header"><span class="badge rounded-pill bg-warning text-dark">Medium
+                                Priority</span><span>July 24, 2022 at 10:30 PM</span></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Task 111</h5><a class="btn btn-danger cancel-btn">Delete Event</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section" id="in-progress-block">
+                <div class="todo-section" id="in-progress-block" ondropover="allowDrop(event)" ondrop="dropToDo(event)">
                     <h1 class="display-4">In-Progress</h1>
                 </div>
             </div>
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section" id="completed-block">
+                <div class="todo-section" id="completed-block" ondropover="allowDrop(event)" ondrop="dropToDo(event)">
                     <h1 class="display-4">Completed</h1>
                 </div>
             </div>
@@ -49,28 +57,32 @@
     <!-- -----------------MODAL--------------------------------------------------------------------- -->
     <div class="modal fade" id="createToDoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control form-control-lg mt-3" type="text" placeholder="Enter the task"
+                        aria-label=".form-control-lg example" id="to-do-input" autocomplete="off">
+                    <select class="form-select form-select-lg mt-3" aria-label=".form-select-lg example"
+                        id="to-do-priority-input">
+                        <option value="High" id="high-value">High</option>
+                        <option selected value="Medium" id="medium-value">Medium</option>
+                        <option value="Low" id="low-value">Low</option>
+                    </select>
+                    <input class="form-control form-control-lg mt-3" type="datetime-local"
+                        aria-label=".form-control-lg example" id="to-do-date" autocomplete="off">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="createToDo()"
+                        data-bs-dismiss="modal">Create</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <input class="form-control form-control-lg mt-3" type="text" placeholder="Enter the task" aria-label=".form-control-lg example" id="to-do-input" autocomplete="off">
-                <select class="form-select form-select-lg mt-3" aria-label=".form-select-lg example" id="to-do-priority-input">
-                    <option value="High" id="high-value">High</option>
-                    <option selected value="Medium" id="medium-value">Medium</option>
-                    <option value="Low" id="low-value">Low</option>
-                  </select>
-                  <input class="form-control form-control-lg mt-3" type="datetime-local" aria-label=".form-control-lg example" id="to-do-date" autocomplete="off">
-            </div>
-            
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="createToDo()" data-bs-dismiss="modal">Create</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
     <!-- ----------------------------------------------------------------------------------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

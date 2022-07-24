@@ -14,10 +14,27 @@ const createToDo = () => {
         day: "numeric",
         hour: "numeric",
         minute: "numeric",
-        second: "numeric",
       });
 
-
+  if (toDoInput === "") {
+      
+    }
 
     createToDoDiv(toDoInput, valueSelected, toDoDeadline)
+}
+
+const ToDoDragStart = (event) => {
+  
+}
+
+const toDoDrag = (event) => {
+  
+}
+
+const allowDrop = (event) => {
+  event.preventDefault()
+}
+
+const dropToDo = (event) => {
+  
 }

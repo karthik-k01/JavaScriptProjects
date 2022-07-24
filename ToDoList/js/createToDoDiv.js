@@ -1,3 +1,5 @@
+let idCount = 0
+
 const createToDoDiv = (toDoInput, valueSelected, toDoDeadline) => {
     
     let toDoCardDiv = document.createElement("div")
@@ -22,7 +24,8 @@ const createToDoDiv = (toDoInput, valueSelected, toDoDeadline) => {
     cardTitleH5.innerText = toDoInput
     cardButtonCancel.innerText = "Delete Event"
         
-        
+    toDoCardDiv.id = `to-do-card-${idCount}`
+    
     toDoCardDiv.appendChild(cardHeaderDiv)
     cardHeaderDiv.appendChild(prioritySpan)
     cardHeaderDiv.appendChild(deadlineSpan)
@@ -47,6 +50,8 @@ const createToDoDiv = (toDoInput, valueSelected, toDoDeadline) => {
     cardButtonCancel.addEventListener('click', () => {
         toDoCardDiv.style.display = 'none'
     })
+
+    idCount++;
 
 /*                     <div class="card">
                         <div class="card-header">
