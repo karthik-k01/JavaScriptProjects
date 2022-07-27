@@ -1,5 +1,24 @@
 let idCount = 0
 
+const ToDoDragStart = (event) => {
+    let toDoCardIDBeingDragged = event.target.id;
+    event.dataTransfer.setData("toDoCard", toDoCardIDBeingDragged);
+  };
+  
+  
+  
+  const allowDrop = (event) => {
+    event.preventDefault();
+  };
+  
+  const dropToDo = (event) => {
+    let toDoCardIDBeingDragged = event.dataTransfer.getData('toDoCard')
+    let toDoCardBeingDropped = document.getElementById(toDoCardIDBeingDragged)
+    let parentElement = event.target
+    parentElement.appendChild(toDoCardBeingDropped)
+};
+  
+
 const createToDoDiv = (toDoInput, valueSelected, toDoDeadline) => {
     
     let toDoCardDiv = document.createElement("div")
@@ -47,6 +66,9 @@ const createToDoDiv = (toDoInput, valueSelected, toDoDeadline) => {
             
     }
 
+    toDoCardDiv.draggable = "true"
+    toDoCardDiv.addEventListener('dragstart', ToDoDragStart)
+
     cardButtonCancel.addEventListener('click', () => {
         toDoCardDiv.style.display = 'none'
     })
@@ -63,3 +85,4 @@ const createToDoDiv = (toDoInput, valueSelected, toDoDeadline) => {
                         </div>
                     </div> */
 }
+

@@ -20,7 +20,7 @@
         </div>
         <div class="row outer">
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section" id="to-do-block" ondropover="allowDrop(event)" ondrop="dropToDo(event)">
+                <div class="todo-section" id="to-do-block" ondragover="allowDrop(event)" ondrop="dropToDo(event)">
                     <h1 class="display-4">To-Do</h1>
                     <!-- <div class="card">
                         <div class="card-header">
@@ -32,22 +32,22 @@
                           <a href="#" class="btn btn-danger cancel-btn" onclick="deleteCard()">Delete Event</a>
                         </div>
                       </div> -->
-                    <div class="card" id="test-id" draggable="true" ondragstart="ToDoDragStart()" ondrag="toDoDrag()">
+                    <!-- <div class="card" id="test-id" draggable="true" ondragstart="ToDoDragStart(event)">
                         <div class="card-header"><span class="badge rounded-pill bg-warning text-dark">Medium
                                 Priority</span><span>July 24, 2022 at 10:30 PM</span></div>
                         <div class="card-body">
                             <h5 class="card-title">Task 111</h5><a class="btn btn-danger cancel-btn">Delete Event</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section" id="in-progress-block" ondropover="allowDrop(event)" ondrop="dropToDo(event)">
+                <div class="todo-section" id="in-progress-block" ondragover="allowDrop(event)" ondrop="dropToDo(event)">
                     <h1 class="display-4">In-Progress</h1>
                 </div>
             </div>
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section" id="completed-block" ondropover="allowDrop(event)" ondrop="dropToDo(event)">
+                <div class="todo-section" id="completed-block" ondragover="allowDrop(event)" ondrop="dropToDo(event)">
                     <h1 class="display-4">Completed</h1>
                 </div>
             </div>
@@ -65,6 +65,12 @@
                 <div class="modal-body">
                     <input class="form-control form-control-lg mt-3" type="text" placeholder="Enter the task"
                         aria-label=".form-control-lg example" id="to-do-input" autocomplete="off">
+                        <div class="valid-feedback" id="toDoInputValid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="toDoInputInvalid">
+                            Please provide a valid Input.
+                        </div>
                     <select class="form-select form-select-lg mt-3" aria-label=".form-select-lg example"
                         id="to-do-priority-input">
                         <option value="High" id="high-value">High</option>
@@ -73,12 +79,18 @@
                     </select>
                     <input class="form-control form-control-lg mt-3" type="datetime-local"
                         aria-label=".form-control-lg example" id="to-do-date" autocomplete="off">
+                        <div class="valid-feedback" id="toDoDateValid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="toDoDateInvalid">
+                            Please provide a valid Date.
+                        </div>
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="createToDo()"
-                        data-bs-dismiss="modal">Create</button>
+                    <button type="button" class="btn btn-primary" autocomplete="off" onclick="createToDo()"
+                     id="createButton">Create</button>
                 </div>
             </div>
         </div>
@@ -89,6 +101,8 @@
         crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
     <script src="js/createToDoDiv.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
