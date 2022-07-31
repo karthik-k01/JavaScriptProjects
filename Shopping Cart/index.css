@@ -1,0 +1,65 @@
+body{
+    background: rgb(32,141,219);
+background: linear-gradient(90deg, rgba(32,141,219,1) 0%, rgba(31,58,80,1) 100%);
+}
+
+.main-header-section.jumbotron{
+    background-color: #698da4;
+    text-align: center;
+}
+
+
+.navbar{
+    background-color: #698da4;
+}
+
+.btn-primary{
+    background: rgb(32,141,219);
+background: linear-gradient(90deg, rgba(32,141,219,1) 0%, rgba(31,58,80,1) 100%);
+}
+
+.btn:active{
+    box-shadow: none;
+}
+
+.btn:focus{
+    box-shadow: none;
+}
+
+
+.navbar-brand img{
+    border-radius: 20px;
+    margin-right: 2px;
+}
+
+.card.product{
+    margin: 10px 0px;
+}
+.card.product .card-img-top{
+    max-height: 300px;
+}
+
+.card.product .btn-outer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.card.product .btn-outer .btn-buy {
+    width: 45%;
+    text-align: center;
+    
+}
+
+.card.product .product-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card.product .checked {
+    color: orange;
+  } 
+
+.card-title.price-title{
+    color: green;
+}
