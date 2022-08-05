@@ -22,7 +22,7 @@
 
 </head>
 
-<body>
+<body onload="fetchData()">
 
     <!-- --------------NAVBAR---------------------------------------------------------------- -->
 
@@ -59,14 +59,15 @@
     <!-- --------------JUMBOTRON---------------------------------------------------------------- -->
 
     <div class="jumbotron main-header-section">
-        <h1 class="display-4">Hurry now! Order on Rex Shop</h1>
+        <h1 class="display-4">Hurry now! Order on <br>
+            <span class="brand-name">Rex</span> </h1>
         <p class="lead">Offers offers offers... we dont like it, we avoid... </p>
         <p class="lead">But offers likes us... we can't avoid </p>
-        <hr class="my-4">
         <p>Explore our new range of products below</p>
+        <hr>
         <img id="explore-img" src="gifs/explore.gif" alt="explore" width="200px" height="200px">
         <br>
-        <a class="btn btn-primary btn-lg" href="#products-display" role="button" onclick="fetchData()">Explore more 
+        <a class="btn btn-primary btn-lg" href="#products-display" role="button" onclick="">Explore more 
            
         </a>
     </div>
@@ -76,6 +77,8 @@
     <div class="container">
 
         <div class="row" id="products-display">
+            <div class="spinner-border text-light" id="product-spinner" role="status">
+              </div>
             <!-- <div class="col-md-3">
                 <div class="card product">
                     <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" class="card-img-top" alt="...">
@@ -105,8 +108,11 @@
             
         </div>
     </div>
+
+
     <script src="js/index.js"></script>
     <script src="js/createProduct.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 
 </html>

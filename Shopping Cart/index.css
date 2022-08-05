@@ -8,9 +8,25 @@ background: linear-gradient(90deg, rgba(32,141,219,1) 0%, rgba(31,58,80,1) 100%)
     text-align: center;
 }
 
+.display-4{
+    font-weight: 500;
+}
+
+span.brand-name{
+    
+    background: rgb(32,141,219);
+background: linear-gradient(90deg, rgba(32,141,219,1) 0%, rgba(31,58,80,1) 100%);
+color: white;
+padding: 0px 30px 5px;
+border-radius: 50px;
+}
 
 .navbar{
     background-color: #698da4;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .nav-link{
@@ -33,6 +49,14 @@ background: linear-gradient(90deg, rgba(32,141,219,1) 0%, rgba(31,58,80,1) 100%)
 .navbar-brand img{
     border-radius: 20px;
     margin-right: 2px;
+}
+
+#product-spinner{
+    margin: 50px auto;
+}
+
+#products-display{
+    padding-top: 60px;
 }
 
 .card.product{
@@ -66,6 +90,7 @@ background: linear-gradient(90deg, rgba(32,141,219,1) 0%, rgba(31,58,80,1) 100%)
 
 .card-title.price-title{
     color: green;
+    margin-left: 1px;
 }
 
 .card-text{
