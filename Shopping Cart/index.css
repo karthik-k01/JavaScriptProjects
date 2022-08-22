@@ -73,9 +73,13 @@ background: linear-gradient(90deg, rgba(32,141,219,1) 0%, rgba(31,58,80,1) 100%)
 }
 
 .card.product .btn-outer .btn-buy {
-    width: 45%;
-    text-align: center;
+    flex: 1;
+    margin: 0 0 0 5px;
     
+}
+
+.card.product .btn-outer .add-to-cart-btn{
+    flex: 1;
 }
 
 .card.product .product-header{
@@ -96,3 +100,8 @@ background: linear-gradient(90deg, rgba(32,141,219,1) 0%, rgba(31,58,80,1) 100%)
 .card-text{
     height: 72px;
 }
+
+.rating-count{
+    margin-left: 5px;
+}
+

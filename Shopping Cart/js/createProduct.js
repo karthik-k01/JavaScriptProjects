@@ -29,15 +29,23 @@ const createProductDiv = (product) => {
     productHeaderDiv.appendChild(cardTitleH5)
     productHeaderDiv.appendChild(cardTitlePriceH4)
     cardBodyDiv.appendChild(cardDescriptionP)
-    cardBodyDiv.appendChild(starSpan1)
-    cardBodyDiv.appendChild(starSpan2)
-    cardBodyDiv.appendChild(starSpan3)
-    cardBodyDiv.appendChild(starSpan4)
-    cardBodyDiv.appendChild(starSpan5)
-    cardBodyDiv.appendChild(numberOfRatingsSpan)
+    
     cardBodyDiv.appendChild(outerBtnDiv)
     outerBtnDiv.appendChild(AddToCartBtn)
     outerBtnDiv.appendChild(BuyNowBtn)
+
+    const ratingStars = Math.ceil(product.rating.rate)
+    ratingStars >= 1 && cardBodyDiv.appendChild(starSpan1)
+    ratingStars >= 2 && cardBodyDiv.appendChild(starSpan2)
+    ratingStars >= 3 && cardBodyDiv.appendChild(starSpan3)
+    ratingStars >= 4 && cardBodyDiv.appendChild(starSpan4)
+    ratingStars >= 5 && cardBodyDiv.appendChild(starSpan5)
+    cardBodyDiv.appendChild(numberOfRatingsSpan)
+
+    AddToCartBtn.addEventListener('click', function () {
+        addToCart(product.id);
+        this.innerHTML = '<i class="fa fa-check-circle" aria-hidden="true"></i>'
+    } )
 
     colDiv.classList = "col-md-3"
     cardProductDiv.classList = "card product"
@@ -54,8 +62,9 @@ const createProductDiv = (product) => {
     starSpan4.classList = "fa fa-star checked"
     starSpan5.classList = "fa fa-star checked"
     outerBtnDiv.classList = "btn-outer"
-    AddToCartBtn.classList = "btn btn-primary"
+    AddToCartBtn.classList = "btn btn-primary add-to-cart-btn"
     BuyNowBtn.classList = "btn btn-primary btn-buy"
+    numberOfRatingsSpan.classList = "rating-count"
 
     colDiv.id = `product-${product.id}`
     cardDescriptionP.innerText = `${product.description.slice(0,50)}...`
@@ -68,7 +77,7 @@ const createProductDiv = (product) => {
     // cardTitlePriceH4.innerText = "$123"
     // cardDescriptionP.innerText = "Some quick example text to build on the card title"
     // numberOfRatingsSpan.innerText = "(57)"
-    AddToCartBtn.innerText = "Add to Cart"
+    AddToCartBtn.innerHTML = '<i class="fa fa-cart-plus" aria-hidden="true"></i>'
     BuyNowBtn.innerText = "Buy Now"
 
     // cardImage.src = "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
