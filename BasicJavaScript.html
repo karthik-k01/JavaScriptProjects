@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JavaScript</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <h1>This is JavaScript</h1>
+    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, maxime?</p>
+    <p id ="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eos ducimus odio ab?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quia corrupti officia temporibus delectus repellendus.</p>
+    <img id="wallpaper" src="https://i.pinimg.com/736x/28/ab/71/28ab71de15b11c195dfb90efd6f1ac11.jpg" alt="1st wallpaper" height="300px" width="150px">
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Batch</th>
+        </tr>
+        <tr>
+            <th>Karthik</th>
+            <th id="t1">10</th>
+        </tr>
+        <tr>
+            <th>Hrithik</th>
+            <th>12</th>
+        </tr>
+    </table>
+    <script>
+        document.getElementById("p1").innerHTML="<b>Changing to Bold</b>"
+        document.getElementById("p2").innerText="Changing Texts"
+        document.getElementById("wallpaper").src = "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        document.getElementById("t1").innerText="11";
+    </script>
+    
+</body>
+</html>

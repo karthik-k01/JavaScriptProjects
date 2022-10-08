@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects 3</title>
+</head>
+<body>
+    <script>
+         let karthik ={
+            name: {
+                firstName: "Karthik",
+                middleName: null,
+                lastName: "K"
+            },
+            isGraduated: true,
+            hobbies: ['Gaming', 'Dancing', 'Playing'],
+            noOfCompaniesApplied: 3
+        }
+        
+        // console.log(Object.keys(karthik))
+        // console.log(Object.values(karthik))
+        // console.log(Object.entries(karthik))
+
+        for(let key in karthik){
+            console.log(key, karthik[key])
+        }
+    </script>
+</body>
+</html>

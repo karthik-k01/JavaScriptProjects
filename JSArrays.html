@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays</title>
+</head>
+<body>
+    <script>
+        /* function calculateInterest(x){
+            if(x>200000){
+                x= x+ (x*0.1) - (x*0.002)
+            }else if(x>100000){
+                x= x+ (x*0.05) - (x*0.005)
+            }else{
+                x = x+(x*0.03)
+            }
+        }
+        var x = prompt("Enter Bank Balance of all 5 accounts")
+        let arr = x.split(",")
+        let element = arr.shift();
+        calculateInterest(element);
+        arr.push(element);
+        console.log(arr) */
+
+
+        /* let arr = ["Anirudh", "Vivek", "Suhas", "Shreyas"]
+        // let newArr = arr.filter(function(element, index){
+        //     return element.length >= 6
+        // })
+
+        let newArr = arr.filter(element => element.length >=6)
+
+        console.log(newArr) */
+
+/*         let arr = [100, 250, 350, 503]
+
+        let x = arr.every(function(element, index){
+            return element % 10 === 0
+        })
+
+        console.log(x) */
+
+        let arr=["Anirudh", "Karthik", "Sananda","Vivek"]
+        let x = arr.some(function(element, index){
+            return element.length == 7
+        })
+    </script>
+</body>
+</html>

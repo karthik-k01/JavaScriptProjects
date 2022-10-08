@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Classes</title>
+</head>
+<body>
+    <script>
+/*         class Student {
+            constructor(name, batch, techStack, subjectMarks){
+                this.name = name
+                this.batch = batch
+                this.techStack = techStack
+                this.subjectMarks = subjectMarks
+            }
+
+            displayInfo(){
+                console.log(`${this.name} from ${this.batch} is currently learning ${this.techStack} Technology`)
+            }
+
+            displayMarks(){
+                return this.subjectMarks.forEach((singleSubject, index) => {
+                    console.log(``)
+                })
+            }
+            isPassed(){
+                return this.subjectMarks.every(singleMarks => singleMarks >= 35)
+            }
+        }
+
+        const karthik = new Student('Karthik', 'Batch 10', 'MERN', [95,35,89,97,97])
+
+        console.log(karthik)
+
+        karthik.displayInfo()
+
+        console.log(karthik.isPassed() ? 'Result:PASS' : 'Result:FAIL') */
+
+        // ------------------------------------------------------------------
+
+
+        class Student {
+            constructor(name, batch, techStack, subjectMarks){
+                this.name = name
+                this.batch = batch
+                this.techStack = techStack
+                this.subjectMarks = subjectMarks
+            }
+
+            displayInfo(){
+                console.log(`${this.name} from ${this.batch} is currently learning ${this.techStack} Technology`)
+            }
+
+            displayMarks(){
+                return this.subjectMarks.forEach((singleSubject, index) => {
+                    console.log(`[SUBJECT ${index + 1}]: ${singleSubject.subject} : ${singleSubject.marks} `)
+                })
+            }
+            isPassed(){
+                return this.subjectMarks.every(singleMarks => singleMarks.marks >= 35)
+            }
+
+            averageMarks(){
+                return this.subjectMarks.reduce((total, singleMarks) => total + singleMarks.marks, 0)/this.subjectMarks.length
+            }
+
+            changeStack(techStack){
+                this.techStack = techStack
+            }
+
+            changeMarks(marksArray){
+                this.subjectMarks = this.subjectMarks.map((element, index) => {
+                    element.marks = marksArray[index]
+                    return element
+                })
+            }
+        }
+
+        const karthik = new Student('Karthik', 'Batch 10', 'MERN', 
+        [
+            {
+            subject : "Maths",
+            marks : 97
+            },{
+                subject : "Science",
+                marks: 97
+            },{
+                subject : "Social",
+                marks : 65
+            },{
+                subject : "English",
+                marks : 50
+            }
+            
+        ])
+
+        console.log(karthik)
+
+        karthik.displayMarks()
+
+        console.log(karthik.isPassed() ? "Result : PASS" : "Result : FAIL")
+
+        console.log(`The avergae marks is ${karthik.averageMarks()}`)
+
+        karthik.changeStack('Java')
+
+        console.log(karthik)
+
+        karthik.changeMarks([32,45,93,65])
+
+        karthik.displayMarks()
+    </script>
+</body>
+</html>

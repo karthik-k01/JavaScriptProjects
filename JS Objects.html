@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+</head>
+<body>
+    <h1 id="display-object"></h1>
+    <script>
+        /* let obj ={
+            Name:"Karthik",
+            Place:"Bengaluru"
+        }
+        // console.log(obj)
+        // console.log(obj.Name)
+        // console.log(obj["Name"])
+          */
+
+        /* let kar = {
+            firstName: 'Karthik',
+            lastName: 'K',
+            age: 24,
+            likesCricket: true
+        }
+        
+        console.log(kar.firstName + " " + kar.lastName + " is " + kar.age + " years old and he " + (kar.likesCricket?"likes ":"does not like ") + "cricket") */
+
+        /* let str = '{"passenger": 5, "wheels": 4, "brand":"Maruti Suzuki","color":"black"}'
+
+        let obj = JSON.parse(str)
+
+        console.log(obj) */
+
+        let obj = {
+            passengers : 5,
+            wheels: 4,
+        }
+        console.log(JSON.stringify(obj))
+
+        document.getElementById("display-object").innerHTML = JSON.stringify(obj)
+    </script>
+    
+</body>
+</html>

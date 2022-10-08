@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ES6 Syntaxes</title>
+</head>
+<body>
+    <script>
+        /* let arr1 = [1,2,3,4,5]
+        let arr2 = [6,7]
+        let arr = arr1 + "," + arr2
+        console.log(arr) */
+
+        /* let arr1 = [1,2,3,4]
+        let arr2 = [5,6,7,8]
+        let arr3 = [9,10,11,12] */
+
+        /* let arr = [...arr1, ...arr2, ...arr3]
+
+        console.log(arr)
+        console.log(...arr)
+        console.log([...arr]) */
+
+        /* let temp = `${arr1},${arr2}`
+        let arr =  temp.split(",")
+        console.log(arr) */
+
+        /* function abc(a,b,...restOfArguments){
+            // console.log(a,b,...restOfArguments)
+            // console.log(...restOfArguments)
+            console.log(a,b)
+        }
+
+        abc(1,2,3,4,5) */
+
+        /* let obj1 = {
+            abc:'abc',
+            def:'def'
+        }
+
+        let obj2 ={
+            abc:'123',
+            ghi:'ghi'
+        } */
+
+        /* let obj = {
+            ...obj1,
+            ...obj2
+        } */
+
+        /* let obj = {
+            ...obj2,
+            ...obj1
+        }
+
+        console.log(obj) */
+
+        /* console.log([2,3,4,5].includes(""))
+
+        let a = 5, b=10
+
+        let obj1 = {a,b}
+
+        console.log(obj1) */
+
+
+        /* let obj1 = {
+            a:5,
+            b:10
+        }
+
+        let obj2 = obj1
+        obj2.b = 20
+        console.log(obj1)
+        console.log(obj2) */
+        
+        /* let obj1 = {
+            a:5,
+            b:10
+        }
+        let obj2 = {...obj1}
+        obj2.b = 20
+        console.log(obj1)
+        console.log(obj2) */ 
+
+        // let obj2 = {...obj1}                  //Shallow copy
+
+        /* let karthik ={
+            name:"Karthik",
+            batch:10,
+            tech:"MERN",
+            address:{
+                city:"Bangalore",
+                state:"Karnataka",
+                country:"India"
+            }
+        }
+
+        let hrithik = {
+            ...karthik,
+            name:"hrithik",
+            address:{
+                ...karthik.address,             //Deep Copy
+                city:"Mysore"
+            }
+        }    
+        console.log(karthik)
+        console.log(hrithik)*/
+
+
+        /* let karthik ={
+            name:"Karthik",
+            batch:10,
+            tech:"MERN",
+            address:{
+                city:"Bangalore",
+                state:"Karnataka",
+                country:"India"
+            }
+        }
+
+        let hrithik = JSON.parse(JSON.stringify(karthik))
+        hrithik.name = "Hrithik"
+        hrithik.address.city = "Mysore"
+        console.log(karthik)
+        console.log(hrithik) */
+
+        /* let karthik ={
+            name:"Karthik",
+            batch:10,
+            tech:"MERN",
+            address:{
+                city:"Bangalore",
+                state:"Karnataka",
+                country:"India"
+            }
+        }
+
+        let hrithik = Object.assign({}, karthik)
+        hrithik.name = "Hrithik"
+        console.log(karthik)
+        console.log(hrithik) */
+
+
+        /* let obj = {
+            a:1,
+            b:2
+        }
+
+        let {a,b} = obj
+
+        console.log(a,b) */
+
+        /* var a = 1, b =2
+
+        var [a,b] = [b,a]
+
+        console.log(a,b) */
+
+        let karthik = {
+            name: "karthik",
+            batch: 10,
+            tech:"MERN"
+        }
+
+        console.log(Object.entries(karthik))
+    </script> 
+</body>
+</html>

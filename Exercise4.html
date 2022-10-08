@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 4</title>
+</head>
+<body>
+    <script>
+        var x = prompt("Enter your number")
+        var pro = 1;
+        for(var i = x; i>=1;i--)
+        {
+            pro *= i;
+        }
+        if(pro <= 1){
+            console.log("Not a prime")
+        }
+        for (let i = 2; i < pro; i++)
+        if (pro % i == 0){
+            console.log('Not a prime')
+        }
+        console.log("Number is prime")
+    </script>
+</body>
+</html>

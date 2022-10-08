@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Callbacks</title>
+    <script>
+        const executeOrder = (callback) => {                        //CallBack Hell
+            console.log("Order Placed")
+
+            setTimeout(() => {
+                console.log("Chef received the order and started to prepare")
+
+                setTimeout(() => {
+                    console.log("Pizza Sauce added")
+
+                    setTimeout(() => {
+                        console.log("First Layer of Cheese added")
+
+                        setTimeout(() => {
+                            console.log("Toppings added")
+
+                            setTimeout(() => {
+                                console.log("Second layer of cheese added")
+                                callback()
+                            },1000)
+                            
+                        }, 1000)
+                        
+                    }, 1000)
+                    
+                }, 1000)
+                
+
+            }, 2000)
+
+        }
+
+
+
+        /* executeOrder(() => {
+            console.log("The order is ready and handed over to delivery executive")
+        }) */
+    </script>
+</head>
+
+<body>
+    <button onclick="executeOrder(() => {
+        console.log('The order is ready and handed over to delivery executive')
+    })">Execute Order</button>
+
+</body>
+
+</html>

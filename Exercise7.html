@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exercise </title>
+</head>
+<body>
+    <script>
+        let students = [
+            {
+                name: "Anirudh",
+                batch: 7,
+                likesIcecream: true
+            },{
+                name: "Shreyas",
+                batch: 8,
+                likesIcecream: false
+            },{
+                name: "Sananda",
+                batch: 9,
+                likesIcecream: true
+            },{
+                name: "Vivek",
+                batch: 10,
+                likesIcecream: false
+            },{
+                name: "Karthik",
+                batch: 11,
+                likesIcecream: true
+            }
+        ]
+
+        let studentLikeIcecream = students.filter(function(student){
+            return student.likesIcecream === true && student.batch === 9
+        })
+
+        console.log(studentLikeIcecream)
+    </script>
+</body>
+</html>

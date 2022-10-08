@@ -21,6 +21,7 @@
                 document.getElementById("bulb1").src ="https://www.w3schools.com/js/pic_bulbon.gif"
                 bulbStatus = false
                 document.getElementById("bName").innerText = "Turn Off"
+                
             }else{
                 document.getElementById("bulb1").src ="https://www.w3schools.com/js/pic_bulboff.gif"
                 bulbStatus = true
@@ -30,17 +31,31 @@
     </script>
 </head>
 <body>
-    <div>
-        <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb off image">
-    <br>
-    <button onclick="turnOff()">Turn Off</button>
-    <button onclick="turnOn()">Turn On</button>
-    </div>
-    <div>
-        <img id="bulb1" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb off image">
+    <div class="bg">
+        <div class="bulbClass">
+            <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb off image">
         <br>
-        <button id="bName" onclick="turnOnorOff()">Turn On</button>
+        <button onclick="turnOff()">Turn Off</button>
+        <button onclick="turnOn()">Turn On</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="bulbClass">
+            <img id="bulb1" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb off image">
+            <br>
+            <button id="bName" onclick="turnOnorOff()">Turn On</button>
+        </div>
     </div>
     
+    <style>
+        .bg{
+            background-color: skyblue;
+        }
+        .bulbClass{
+            text-align: center;
+            font-size: 300%;
+        }
+    </style>
 </body>
 </html>

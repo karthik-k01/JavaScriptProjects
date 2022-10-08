@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Exercise 8</title>
+</head>
+<body>
+    <script>
+        let students=[
+            {
+               name:"Anirudh",
+               batch: 7,
+               marks:{
+                   maths: 70,
+                   science: 85,
+                   social: 62,
+                   english: 92,
+                   kannada: 56
+               } 
+            },{
+                name:"Karthik",
+               batch: 8,
+               marks:{
+                   maths: 65,
+                   science: 48,
+                   social: 97,
+                   english: 74,
+                   kannada: 91
+               } 
+            },{
+                name:"Shreyas",
+               batch: 9,
+               marks:{
+                   maths: 81,
+                   science: 59,
+                   social: 42,
+                   english: 36,
+                   kannada: 41
+               } 
+            }
+        ]
+
+        let studentsCalculated = []
+
+        for(let i=0;i<students.length;i++){
+            let student = students[i];
+            let obj = {}
+            obj.name = student.name
+            obj.batch = student.batch
+            let sum = 0
+            let marks = Object.values(student.marks)
+            for(let j=0;j<marks.length;j++){
+                sum+=marks[j]
+            }
+            obj.avgMarks = sum/5;
+            studentsCalculated.push(obj);
+        }
+        console.log(studentsCalculated)
+
+    </script>
+</body>
+</html>

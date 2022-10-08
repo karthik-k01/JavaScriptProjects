@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+    <script>
+        var a ="JavaScript"
+        function input(){
+            var x = prompt("Enter the value")
+            var discount
+            if(Number(x) > 3500)
+            {
+                var age = prompt("Enter your age")
+                if(Number(age) >= 18)
+                {
+                    discount = x - x/12
+                }
+                else{
+                    discount = x - x/10
+                }
+            }
+            else if (Number(x) >2500 && Number(x) <= 3500)
+            {
+                discount = x - x/5
+            }
+            else{
+                discount = x
+            }
+            alert(discount)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="input()">Calculate</button>
+</body>
+</html>
