@@ -1,4 +1,5 @@
 .navbar {
+  width: 100%;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
@@ -9,7 +10,7 @@
 }
 
 .navlink-services {
-  margin-left: 236px;
+  margin-left: 49px;
   margin-top: 28px;
   margin-bottom: 27px;
 }
@@ -56,6 +57,13 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 1400px) {
+  .outer-component-1 {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
 .image-1 {
   width: 459px;
   height: 530px;
@@ -98,6 +106,16 @@
   flex-wrap: nowrap;
   margin-left: 80px;
   margin-right: 80px;
+}
+
+@media screen and (max-width: 1400px) {
+  .outer-component-2 {
+    display: block;
+    justify-content: center;
+  }
+  .card-body {
+    display: block;
+  }
 }
 
 .card {
@@ -345,6 +363,30 @@
   margin-bottom: 20px;
 }
 
+.component-3-primary {
+  display: block;
+}
+
+@media screen and (max-width: 1400px) {
+  .component-3-cards {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .outer-component-3 {
+    height: 1850px;
+
+    display: block;
+  }
+  .component-3-primary {
+    display: block;
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
 .card-star-3 {
   margin-left: 32.55px;
 }
@@ -385,6 +427,23 @@
 .component-4-line {
   margin-left: 313px;
   margin-top: 16px;
+}
+
+@media screen and (max-width: 1400px) {
+  .component-4-circle {
+    margin-left: 50px;
+    margin-top: 90px;
+  }
+  .component-4-line {
+    margin-left: 79px;
+    margin-top: 16px;
+  }
+  .component-4-secondary {
+    margin-right: 50px;
+  }
+  #component-4-p {
+    font-size: 15px;
+  }
 }
 
 #component-4-circle-2 {
@@ -436,6 +495,12 @@
   padding-top: 46px;
 }
 
+.component-5-primary {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px !important;
+}
+
 .component-5-h2 {
   width: 425px;
   height: 40px;
@@ -453,7 +518,7 @@
   margin-top: 15px;
 }
 
-#component-5-card-1 {
+.component-5-card-1 {
   height: 343px;
   width: 593px;
   margin-top: 70px;
@@ -557,6 +622,34 @@
   margin-top: 88.9px;
 }
 
+#component-5-card-2 {
+  margin-right: 80px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  #component-5-card-2 {
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-top: 23px;
+  }
+  .component-5-primary {
+    display: block;
+    justify-content: center;
+    margin-bottom: 0px !important;
+  }
+  .outer-component-5 {
+    height: 1985px;
+  }
+  #component-5-secondary-card {
+    width: 100%;
+    height: 290px;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 75px;
+    margin-top: 53px;
+  }
+}
 #component-5-card-2-p {
   width: 523px;
   height: 70px;
@@ -572,25 +665,25 @@
   height: 70px;
   margin-left: 111px;
   margin-top: 69px;
-  background-color: #FF7833;
-color: #FFFFFF;
-border: none;
-border-radius:5px;
-font-size: 20px;
-font-weight: 500;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: center;
-
+  background-color: #ff7833;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-right: 46px;
 }
 
 #component-5-orange {
-  width: 176px;
+  width: 25%;
   height: 5px;
 }
 
 #component-5-blue {
-  width: 1030px;
+  width: 75%;
   height: 5px;
 }
 
@@ -607,6 +700,23 @@ text-align: center;
   height: 43.02px;
   margin-top: 136px;
   margin-left: 291px;
+}
+
+@media screen and (max-width: 1400px) {
+  .component-6-h2 {
+    width: 50%;
+    height: 80px;
+    margin-left: 50px;
+    margin-top: 118px;
+    font-size: 15px;
+  }
+  #component-6-img-clutch {
+    width: 90%;
+    height: 43.02px;
+    margin-top: 136px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 
 .component-6-part-1 {
@@ -641,6 +751,20 @@ text-align: center;
   top: 19.5px;
   left: 11.5px;
   color: #ff7833;
+}
+.component-6-secondary {
+  position: relative;
+}
+
+@media screen and (max-width: 1400px) {
+  .component-6-part-1 {
+    display: block;
+    padding-left: 20px;
+  }
+  .component-6-secondary {
+    left: -100px;
+    top: -170px;
+  }
 }
 
 .component-6-pill-2 {
@@ -720,6 +844,21 @@ text-align: center;
   position: relative;
 }
 
+@media screen and (max-width: 836px) {
+  .component-6-part-1-bg-image {
+    height: 621px;
+    width: 100%;
+    margin-top: 48.58px;
+    margin-bottom: 48.58px;
+    padding-left: 124px;
+    padding-right: 124px;
+    position: fixed;
+  }
+  .component-6-secondary {
+    display: none;
+  }
+}
+
 .component-6-mobile {
   position: absolute;
   width: 231.13px;
@@ -765,6 +904,20 @@ text-align: center;
   margin-bottom: 0px;
   justify-content: center;
   padding-left: 50.25px;
+}
+
+@media screen and (max-width: 1400px) {
+  .component-7-outer {
+    display: block;
+    position: relative;
+    border: 0.97px #dde7f1 solid;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 189px;
+    margin-bottom: 0px;
+    justify-content: center;
+    padding-left: 50.25px;
+  }
 }
 
 .component-7-bg-img {
@@ -855,6 +1008,21 @@ text-align: center;
   margin-right: 106px;
 }
 
+.component-9-primary {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1170px) {
+  .component-9-primary {
+    display: inline-block;
+    margin-bottom: 50px;
+  }
+  .component-9-outer {
+    height: 600px;
+  }
+}
+
 #component-10-img-1-outer {
   height: 32.56999969482422px;
   width: 23.57000160217285px;
@@ -941,13 +1109,14 @@ text-align: center;
 
 .component-11-outer {
   height: 203px;
-  width: 1206px;
+  width: 90%;
   border-radius: 25px;
   border: 1px solid #dde7f1;
   justify-content: center;
   margin: auto;
   margin-top: 57px;
   margin-bottom: 779px;
+  display: flex;
 }
 
 #component-11-p-1 {
@@ -986,8 +1155,58 @@ text-align: center;
   color: #ffffff;
   border: none;
 }
+.component-11-inner {
+  display: flex;
+}
 
-#component-2-shadow-card{
-  box-shadow: 7px 12px 35px 0px #6C6C6C21;
+@media screen and (max-width: 1400px) {
+  .component-11-outer {
+    height: 203px;
+    width: 90%;
+    border-radius: 25px;
+    border: 1px solid #dde7f1;
+    justify-content: center;
+    margin: auto;
+    margin-top: 57px;
+    margin-bottom: 779px;
+    display: block;
+  }
+  .component-11-btn {
+    height: 70px;
+    width: 383px;
+    display: inline-block;
+  }
+}
 
+@media screen and (max-width: 800px) {
+  .component-11-inner {
+    display: block;
+  }
+  .component-11-outer {
+    height: 350px;
+    width: 90%;
+    border-radius: 25px;
+    border: 1px solid #dde7f1;
+    justify-content: center;
+    margin: auto;
+    margin-top: 57px;
+    margin-bottom: 779px;
+    display: block;
+  }
+}
+
+#component-2-shadow-card {
+  box-shadow: 7px 12px 35px 0px #6c6c6c21;
+}
+
+.component-10-primary {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .component-10-primary {
+    display: block;
+    justify-content: center;
+  }
 }
