@@ -1567,6 +1567,8 @@
   .component-9-img-1 {
     height: fit-content;
     width: 90%;
+    margin: auto;
+    text-align: center;
     margin-top: 50px;
     margin-left: 10px;
     margin-right: 10px;
@@ -1575,6 +1577,7 @@
     height: fit-content;
     width: 167px;
     margin: auto;
+    text-align: center;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -1583,6 +1586,8 @@
   .component-9-img-3 {
     height: fit-content;
     width: 139px;
+    margin: auto;
+    text-align: center;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -1590,6 +1595,8 @@
   .component-9-img-4 {
     height: fit-content;
     width: 90%;
+    margin: auto;
+    text-align: center;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
