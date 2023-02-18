@@ -1,1 +1,1 @@
-https://kkarthik01.github.io/javascript-projects/Shopping Cart/
+https://kkarthik01.github.io/javascript-projects/Shopping%20Cart/
