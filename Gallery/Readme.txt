@@ -1,1 +1,1 @@
-https://karthik-k01.github.io/karthik.github.io/Gallery/
+https://kkarthik01.github.io/javascript-projects/Gallery/
