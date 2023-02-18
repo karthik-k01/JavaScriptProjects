@@ -1,1 +1,1 @@
-https://karthik-k01.github.io/karthik.github.io/NumberGuessingGame/
+https://kkarthik01.github.io/javascript-projects/NumberGuessingGame/
