@@ -1,1 +1,1 @@
-https://karthik-k01.github.io/karthik.github.io/Registration%20Form/
+https://kkarthik01.github.io/javascript-projects/Registration%20Form/
